@@ -1,52 +1,5 @@
 #!/usr/bin/python
 
-def income_class(income):
-	income = income * (107383.0 - 11389.0) + 11389.0
-	if income <= 25000:
-		return 1
-	if income <= 40000:
-		return 2
-	if income <= 55000:
-		return 3
-	if income <= 70000:
-		return 4
-	if income <= 85000:
-		return 5
-	if income <= 125000:
-		return 6
-	return 7
-
-def poverty_class(poverty):
-	poverty = poverty * 64.334705
-	if poverty <= 5:
-		return 1
-	if poverty <= 10:
-		return 2
-	if poverty <= 20:
-		return 3
-	if poverty <= 30:
-		return 4
-	if poverty <= 45:
-		return 5
-	if poverty <= 60:
-		return 6
-	return 7
-
-def crime_class(crime):
-	if crime <= 30:
-		return 1
-	if crime <= 60:
-		return 2
-	if crime <= 90:
-		return 3
-	if crime <= 150:
-		return 4
-	if crime <= 250:
-		return 5
-	if crime <= 500:
-		return 6
-	return 7
-
 # set up Python environment: numpy for numerical routines, and matplotlib for plotting
 import numpy as np
 import sys
@@ -149,25 +102,31 @@ for line in file:
 	
 	if count % 200 == 0:		
 		print 'Income'
-		print 'Total:', data_total, ', Correct:', income_correct, ', incorrect:', (data_total-income_correct)
+		print 'Total:', data_total, ', Correct:', income_correct, ', incorrect:', (data_total-income_correct), 
+		print ', accuracy: ', str(float(income_correct*100.0/data_total))+'%'
 		print 'Poverty'
-		print 'Total:', data_total, ', Correct:', poverty_correct, ', incorrect:', (data_total-poverty_correct)
+		print 'Total:', data_total, ', Correct:', poverty_correct, ', incorrect:', (data_total-poverty_correct),
+		print ', accuracy: ', str(float(poverty_correct*100.0/data_total))+'%'
 		print 'Crime'
-		print 'Total:', data_total, ', Correct:', crime_correct, ', incorrect:', (data_total-crime_correct)
+		print 'Total:', data_total, ', Correct:', crime_correct, ', incorrect:', (data_total-crime_correct),
+		print ', accuracy: ', str(float(crime_correct*100.0/data_total))+'%'
 		#break
 		
 
 print 'Income'
-print 'Total:', data_total, ', Correct:', income_correct, ', incorrect:', (data_total-income_correct)
+print 'Total:', data_total, ', Correct:', income_correct, ', incorrect:', (data_total-income_correct), 
+print ', accuracy: ', str(float(income_correct*100.0/data_total))+'%'
 print 'Poverty'
-print 'Total:', data_total, ', Correct:', poverty_correct, ', incorrect:', (data_total-poverty_correct)
+print 'Total:', data_total, ', Correct:', poverty_correct, ', incorrect:', (data_total-poverty_correct),
+print ', accuracy: ', str(float(poverty_correct*100.0/data_total))+'%'
 print 'Crime'
-print 'Total:', data_total, ', Correct:', crime_correct, ', incorrect:', (data_total-crime_correct)
+print 'Total:', data_total, ', Correct:', crime_correct, ', incorrect:', (data_total-crime_correct),
+print ', accuracy: ', str(float(crime_correct*100.0/data_total))+'%'
 
-print 'Income'
-print '      ',
+print 'Income Confusion Table'
+print '     ',
 for i in range(0,7):
-	print '(' + str(i+1) + ')',
+	print '  (' + str(i+1) + ')',
 print
 for i in range(0,7):
 	print '['+str(i+1)+']', '',
@@ -176,10 +135,10 @@ for i in range(0,7):
 	print
 print
 
-print 'Poverty'
-print '      ',
+print 'Poverty Confusion Table'
+print '     ',
 for i in range(0,7):
-	print '(' + str(i+1) + ')',
+	print '  (' + str(i+1) + ')',
 print
 for i in range(0,7):
 	print '['+str(i+1)+']', '',
@@ -188,10 +147,10 @@ for i in range(0,7):
 	print
 print
 
-print 'Crime'
-print '      ',
+print 'Crime Confusion Table'
+print '     ',
 for i in range(0,7):
-	print '(' + str(i+1) + ')',
+	print '  (' + str(i+1) + ')',
 print
 for i in range(0,7):
 	print '['+str(i+1)+']', '',
