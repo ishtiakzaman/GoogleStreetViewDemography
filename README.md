@@ -1,4 +1,4 @@
-# StreetView Demography Detection
+# StreetView Demography
 
 We collected 14000 geolocations from IndianaPolis area tagged with their demographic characteresitics. The three chatacteristics we worked on are income level, poverty level and crime level, each between 1 and 7.
 
