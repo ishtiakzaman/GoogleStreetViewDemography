@@ -1,6 +1,6 @@
 # Google Street View Demography
 
-We collected 14000 geolocations from IndianaPolis area tagged with their demographic characteristics. The three characteristics we worked on are income level, poverty level and crime level, each between 1 and 7.
+Collaborated work with the Geography department. We collected 14000 geolocations from IndianaPolis area tagged with their demographic characteristics. The three characteristics we worked on are income level, poverty level and crime level, each between 1 and 7.
 
 For each geolocations we collected 4 google streetview images facing north, west, south and east each with the dimension 256x256, which results in more than 60K images to train on.
 
