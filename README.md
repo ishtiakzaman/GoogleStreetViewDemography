@@ -1,4 +1,4 @@
-# StreetView Demography
+# Google Street View Demography
 
 We collected 14000 geolocations from IndianaPolis area tagged with their demographic characteristics. The three characteristics we worked on are income level, poverty level and crime level, each between 1 and 7.
 
